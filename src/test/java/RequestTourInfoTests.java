@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class TourInfoTests extends BaseUl {
+public class RequestTourInfoTests extends BaseUl {
 
 
     @Test
