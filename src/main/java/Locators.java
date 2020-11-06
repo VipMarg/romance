@@ -10,6 +10,7 @@ public class Locators {
 
 
 
+
  //How it works page"
     public static final By LINK_HOWITWORKS = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
 
@@ -56,10 +57,10 @@ public class Locators {
 
 
     //Join today page
-    public static final By BUTTON_JOIN_TODAY= By.xpath("//a[text()='JOIN TODAY!']");
-    public static final By TEXT_FIELD_JOINEMAIL= By.cssSelector("input#email");
-    public static final By TEXT_FIELD_JOINPASSWORD= By.cssSelector("input#password");
-    public static final By BUTTON_JOINNEXT= By.cssSelector(".btn.btn-primary.btn-block.btn-lg");
+    public static final By LINK_JOIN_TODAY= By.xpath("//a[text()='JOIN TODAY!']");
+    public static final By TEXT_FIELD_EMAIL2= By.cssSelector("input#email");
+    public static final By TEXT_FIELD_PASSWORD2= By.cssSelector("input#password");
+    public static final By BUTTON_NEXT2= By.cssSelector(".btn.btn-primary.btn-block.btn-lg");
 
     //Home Video Box page
     public static final By BUTTON_HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");

@@ -6,7 +6,7 @@ public class SupportTests extends BaseUl {
 
     @Test
     public void testSupport() {
-        driver.findElement(Locators.LINK_SUPPORT).click();
+        mainPage.clickLinkSupport();
 
     }
 }

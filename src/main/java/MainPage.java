@@ -10,6 +10,7 @@ public class MainPage extends BaseActions {
     public MainPage(WebDriver driver, WebDriverWait wait){
 
         super(driver, wait);
+        int indexButtonNext = 1;
     }
 
 
@@ -40,5 +41,32 @@ public class MainPage extends BaseActions {
         checkboxConfirmation.click();
 
     }
+
+    public void clickRequestTourInfoButton(){
+        driver.findElement(Locators.BUTTON_REQUEST_TOUR_INFO).click();
+    }
+
+    public void clickLinkJoinToday(){
+        driver.findElement(Locators.LINK_JOIN_TODAY).click();
+
+    }
+    public void completeFirstPartOfRegistration2(){
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email2);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password2);
+        driver.findElements(Locators.BUTTON_NEXT).get(1).click();
+
+    }
+
+    public void clickButtonVideoBox(){
+        WebElement ele = driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX_IFRAME);
+        driver.switchTo().frame(ele);
+        driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).click();
+    }
+
+    public void clickLinkSupport(){
+        driver.findElement(Locators.LINK_SUPPORT).click();
+    }
+
+
 
 }

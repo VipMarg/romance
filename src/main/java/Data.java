@@ -6,6 +6,8 @@ public class Data {
     public static final String password="33556677";
     public static final String username="margo2020";
     public static final String phone="123456";
+    public static final String email2="511@gmail.com";
+    public static final String password2="12356";
 
 
 

@@ -11,9 +11,10 @@ public class HomeVideoBoxTests extends BaseUl{
 
     @Test
     public void testHomeVideoBox() {
-        WebElement ele = driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX_IFRAME);
-        driver.switchTo().frame(ele);
-        driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).click();
+        mainPage.clickButtonVideoBox();
+        Assert.assertTrue(driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).isDisplayed(),"Element is displayed");
+        System.out.println("Element is displayed");
+
     }
 
 

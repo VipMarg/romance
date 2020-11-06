@@ -12,10 +12,13 @@ public class BaseActions {
     public BaseActions(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait =wait;
+
+
     }
     public static String generateNewNumber(String name, int length){
 
         return name + RandomStringUtils.random(length, "172984757");
+
 
     }
 
