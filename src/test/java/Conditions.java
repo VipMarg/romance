@@ -185,15 +185,83 @@ public class Conditions extends BaseUl {
      List<WebElement>links=driver.findElements(By.xpath("//button"));
         System.out.println(links.size());
         for (int i = 0; i <links.size(); i++) {
-          String info= links.get(1).getText();
+          String info= links.get(i).getText();
             System.out.println(info);
         }
 
     }
+    @Test
+    public void test18(){
+        List<Integer>crunchifylist1=new ArrayList<>(Arrays.asList(5,10,19));
+        for (int i = 0; i <crunchifylist1.size() ; i++) {
+            int element =crunchifylist1.get(i);
+            System.out.println(element);
+
+        }
+
+    }
+    @Test
+    public void test19(){
+        List<Integer>crunchifylist1=new ArrayList<>(Arrays.asList(5,10,19));
+        System.out.println(crunchifylist1.size());
+        crunchifylist1.add(10);
+        System.out.println(crunchifylist1.size());
+
+        for (int i = 0; i <crunchifylist1.size(); i++) {
+            int element=crunchifylist1.get(i);
+            System.out.println(element);
+        }
+
+    }
+
+    @Test
+    public void test20(){
+      String phrase= "Melon is inside list";
+      List<String >crunchifylist1=new ArrayList<>(Arrays.asList("apple","kiwi",phrase));
+      crunchifylist1.add("melon");
+        System.out.println(crunchifylist1);
+
+        for (int i = 0; i < crunchifylist1.size(); i++) {
+            String element= crunchifylist1.get(i);
+            System.out.println(i + "iteration");
+
+            if(element.contains("me")){
+                System.out.println(phrase);
+            }
+            if(element.equals("orange")){
+                System.out.println("Orange");
+            }
+            if(element.contains("i")){
+                System.out.println("IIIII");
+            }
+            else {
+                System.out.println("Bad loop");
+            }
+
+        }
+    }
+    @Test
+    public void test21(){
+        String expectedTitle="Ukrainian women for marriage";
+        List<WebElement>links=driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
+        System.out.println(links.size());
+
+        for (int i = 0; i < links.size(); i++) {
+            String info=links.get(i).getText();
+            System.out.println(info);
+            links.get(i).click();
+            if(info.contains("WORK")){
+                String actualTitle= driver.findElement(By.xpath("//h1")).getText();
+                Assert.assertEquals(expectedTitle,actualTitle);
+            }
+            driver.get(Data.expectedUrlHowItWorks);
+            links= driver.findElements(By.xpath("//ul[@class='navbar-nav']//li"));
 
 
+        }
 
 
+   }
 
 
 

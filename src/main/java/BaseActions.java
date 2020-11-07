@@ -14,6 +14,7 @@ public class BaseActions {
         this.wait =wait;
 
 
+
     }
     public static String generateNewNumber(String name, int length){
 
