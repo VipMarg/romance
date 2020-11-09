@@ -1,4 +1,4 @@
-import net.bytebuddy.utility.RandomString;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import java.lang.reflect.Method;
-import java.util.Random;
+
 
 public class BaseUl {
     WebDriver driver;
@@ -60,6 +60,7 @@ public class BaseUl {
                 driver.get("chrome://settings/clearBrowserData");
 
             }
+
         wait = new WebDriverWait(driver, 20);
         mainPage = new MainPage(driver,wait);
         searchPage= new SearchPage(driver,wait);

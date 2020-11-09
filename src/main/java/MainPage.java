@@ -54,9 +54,9 @@ public class MainPage extends BaseActions {
 
     }
     public void completeFirstPartOfRegistration2(){
-        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email2);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password2);
-        driver.findElements(Locators.BUTTON_NEXT).get(indexButtonNext).click();
+        driver.findElement(Locators.TEXT_FIELD_EMAIL2).sendKeys(Data.email2);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD2).sendKeys(Data.password2);
+        driver.findElements(Locators.BUTTON_NEXT2).get(indexButtonNext).click();
 
     }
 
