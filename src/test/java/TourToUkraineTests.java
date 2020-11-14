@@ -1,10 +1,7 @@
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class TourToUkraineTests extends BaseUl {
 
@@ -13,7 +10,7 @@ public class TourToUkraineTests extends BaseUl {
 
         @Test
         public void testTourToUkraine() {
-            driver.findElements(Locators.LinkToutToUkraine).get(indexLinkToutToUkraine).click();
+            driver.findElements(Locators.LINK_TOUR_TO_UKRAINE).get(indexLinkToutToUkraine).click();
             currentUrl = driver.getCurrentUrl();
             System.out.println(currentUrl);
             Assert.assertEquals(currentUrl, Data.expectedUrlTourToUkraine);

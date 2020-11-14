@@ -1,21 +1,20 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MediaTests extends BaseUl {
 
-    String currentUrl;
+    String currentUrlMedia;
 
 
 
     @Test
     public void testMedia() {
         driver.findElement(Locators.LINK_MEDIA).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        Assert.assertEquals(currentUrl, Data.expectedUrlMedia);
+        currentUrlMedia = driver.getCurrentUrl();
+        System.out.println(currentUrlMedia);
+        Assert.assertEquals(currentUrlMedia, Data.expectedUrlMedia);
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {

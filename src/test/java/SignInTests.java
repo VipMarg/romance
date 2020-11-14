@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class SignInTests extends BaseUl {
 

@@ -66,8 +66,8 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).click();
     }
 
-    public void clickLinkSupport(){
-        driver.findElement(Locators.LINK_SUPPORT).click();
+    public void clickLinkMailSupport(){
+        driver.findElement(Locators.LINK_MAIL_SUPPORT).click();
     }
 
 

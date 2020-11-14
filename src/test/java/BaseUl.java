@@ -1,11 +1,7 @@
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -27,11 +23,9 @@ public class BaseUl {
 
 
     @BeforeMethod
+    @Parameters("browser")
 
-
-        @Parameters("browser")
-
-        public void setup(@Optional("chrome") String browser, Method method){
+    public void setup(@Optional("chrome") String browser, Method method){
 
             // Check if parameter passed from TestNG is 'firefox'
 
@@ -76,21 +70,7 @@ public class BaseUl {
         //driver.quit();
     }
 
-    public void getDropDownListByIndex(WebElement element, int index){
-        Select select = new Select(element);
-        select.selectByIndex(index);
-    }
 
-    public void getDropDownListByText(WebElement element, String text){
-        Select select = new Select(element);
-        select.selectByVisibleText(text);
-    }
-
-    public void getDropDownListByValue(WebElement element, String value){
-        Select select = new Select(element);
-        select.selectByValue(value);
-
-    }
 
 }
 
