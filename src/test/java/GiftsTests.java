@@ -3,14 +3,14 @@ import org.testng.annotations.Test;
 
 public class GiftsTests extends BaseUl {
 
-    String currentUrl;
+    String currentUrlGifts;
 
     @Test
     public void testStore() {
         driver.findElement(Locators.LINK_GIFTS).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        Assert.assertEquals(currentUrl, Data.expectedUrlGifts);
+        currentUrlGifts = driver.getCurrentUrl();
+        System.out.println(currentUrlGifts);
+        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
 
     }
 }

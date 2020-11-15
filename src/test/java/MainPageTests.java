@@ -1,9 +1,11 @@
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.WeakHashMap;
 
 public class MainPageTests extends BaseUl {
 
@@ -17,6 +19,19 @@ public class MainPageTests extends BaseUl {
         mainPage.checkLinksOnWebPage("//img", "src");
 
     }
+   @Test
+   public void smokeTestMainPage(){
+       List<WebElement>mainTabs= driver.findElements(By.xpath("//ul[@class='navbar-nav']//li//a"));
+       for (int i = 0; i < mainTabs.size(); i++) {
+          mainTabs.get(i).click();
+          driver.get(Data.mainUrl);
+          mainTabs= driver.findElements(By.xpath("//ul[@class='navbar-nav']//li//a"));
+
+       }
+   }
+
+
+
     @Test
     public void testSupport() {
         mainPage.clickLinkMailSupport();

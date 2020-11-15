@@ -1,30 +1,31 @@
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class SearchTests extends BaseUl {
 
-    String currentUrl;
+    String currentUrlSearch;
+    public static final boolean testCase1= true;
+    public static final boolean testCase2= true;
+    public static final boolean testCase3= true;
 
 
-    @Test
-    public void testSearch() {
+
+    @Test (priority = 1,enabled = testCase1,groups = {"ie","user","admin"})
+    public void testSearchPageTestCase1() {
         driver.findElement(Locators.LINK_SEARCH).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        //Assert.assertEquals(currentUrl, Data.expectedUrlSearch);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        currentUrlSearch = driver.getCurrentUrl();
+        System.out.println(currentUrlSearch);
+        //Assert.assertEquals(currentUrlSearch, Data.expectedUrlSearch);
+
+
         /*Select select = new Select(driver.findElement(By.xpath("//div[@class='form-inline']//select")));
         select.selectByIndex(2);*/
 
-        softAssert.assertEquals(currentUrl, Data.expectedUrlPrettyWomen,"Url is wrong");
+        softAssert.assertEquals(currentUrlSearch, Data.expectedUrlPrettyWomen,"Url is wrong");
         WebElement dropDownListSortBy=driver.findElement(Locators.DROP_DOWN_LIST_SORT_BY);
         searchPage.getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY, "default");
         searchPage.getDropDownListByValue(Locators.DROP_DOWN_LIST_SORT_BY, "name");
@@ -46,8 +47,8 @@ public class SearchTests extends BaseUl {
 
     }
 
-    @Test
-    public void selectRandomDropDownList2() {
+    @Test (priority = 2,enabled = testCase3,groups = {"ie","user","admin"})
+    public void selectRandomDropDownList2TestCase2() {
         driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         int sizeOfDropDownListSortBy= searchPage.getSizeDropDownList(Locators.DROP_DOWN_MAX_AGE);
@@ -57,6 +58,11 @@ public class SearchTests extends BaseUl {
             mainPage.javaWaitSec(3);
         }
 
+        }
+
+        @Test (priority = 3,enabled = testCase3,groups = {"ie","user","admin"})
+    public void verificationsWebTestCase3(){
+        Assert.assertEquals("Web","Web");
         }
 
 

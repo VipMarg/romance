@@ -36,7 +36,7 @@ public class Locators {
 
                                             // Main page
     //Registration page (Join for free now)
-    public static final By BUTTON_REGISTRATION = By.cssSelector("#show-registration-block");
+    public static final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("input#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
@@ -58,7 +58,7 @@ public class Locators {
 
 
                                      //Main page
-   public static final By LINK_MAIL_SUPPORT= By.cssSelector("a[href='mailto:support@romanceabroad.com']");
+
    public static final By TAB_OF_MAIN_PAGE= By.xpath("//ul[@class='navbar-nav']//li");
    public static final By TITLE_OF_MAIN_PAGE= By.xpath("//div[@class='col-lg-8 mx-auto']//p[@class='text-faded mb-5']");
    public static final By TITLE_OF_MAIN_PAGE2= By.xpath("//h1[@class='text-uppercase']//strong[text()='Ukrainian Girls Dating Site']");
@@ -69,6 +69,7 @@ public class Locators {
    public static final By LINK_FACEBOOK= By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']//img[@src='/img/facebook-ico.jpg']");
    public static final By TAB_PHONE= By.xpath("//span//a[@href='callto:18885997816']");
    public static final By TITLE_GET_IN_TOUCH= By.xpath("//div[@class='col-lg-5']//h2[text()='Get In Touch']");
+   public static final By LINK_MAIL_SUPPORT= By.cssSelector("a[href='mailto:support@romanceabroad.com']");
    public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
    public static final By BUTTON_HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
    public static final By BUTTON_HOME_VIDEO_BOX= By.xpath("//button[@class='ytp-large-play-button ytp-button']");

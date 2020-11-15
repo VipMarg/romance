@@ -3,15 +3,15 @@ import org.testng.annotations.Test;
 
 public class HowItWorksTests extends BaseUl {
 
-    String currentUrl;
+    String currentUrlHowWeWork;
 
 
     @Test
     public void testHowItWorks() {
         driver.findElement(Locators.LINK_HOWITWORKS).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        Assert.assertEquals(currentUrl, Data.expectedUrlHowItWorks);
+        currentUrlHowWeWork = driver.getCurrentUrl();
+        System.out.println(currentUrlHowWeWork);
+        Assert.assertEquals(currentUrlHowWeWork, Data.expectedUrlHowItWorks);
     }
 
 

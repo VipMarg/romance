@@ -3,14 +3,14 @@ import org.testng.annotations.Test;
 
 public class BlogTests extends BaseUl {
 
-    String currentUrl;
+    String currentUrlBlog;
 
     @Test
     public void testBlog() {
         driver.findElement(Locators.LINK_BLOG).click();
-        currentUrl = driver.getCurrentUrl();
-        System.out.println(currentUrl);
-        Assert.assertEquals(currentUrl, Data.expectedUrlBlog);
+        currentUrlBlog = driver.getCurrentUrl();
+        System.out.println(currentUrlBlog);
+        Assert.assertEquals(currentUrlBlog, Data.expectedUrlBlog);
 
     }
 

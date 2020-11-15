@@ -18,8 +18,24 @@
     </test>
     <test name="ChromeTestCases">
         <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <exclude name="ie"/>
+                <include name="admin"/>
+                <include name="user"/>
+            </run>
+        </groups>
+
         <classes>
-            <class name ="RegistrationTests"/>
+            <class name="SearchTests">
+                <methods>
+                    <include name=".*Search.*"/>
+                    <include name=".*List.*"/>
+                    <exclude name=".*Web.*"/>
+
+                </methods>
+            </class>
+
         </classes>
     </test>
 

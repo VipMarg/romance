@@ -16,9 +16,9 @@ public class MainPage extends BaseActions {
 
     }
 
-
     public void clickJoinButton(){
-        driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        //driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        performClick(Locators.BUTTON_REGISTRATION);
     }
     public void completeFirstPartOfRegistration(){
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
