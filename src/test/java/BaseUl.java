@@ -19,6 +19,7 @@ public class BaseUl {
     MainPage mainPage;
     SearchPage searchPage;
     MediaPage mediaPage;
+    ContactUsPage contactUsPage;
     SoftAssert softAssert=new SoftAssert();
 
 
@@ -59,6 +60,7 @@ public class BaseUl {
         mainPage = new MainPage(driver,wait);
         searchPage= new SearchPage(driver,wait);
         mediaPage= new MediaPage(driver,wait);
+        contactUsPage=new ContactUsPage(driver,wait);
         driver.manage().window().maximize();
         driver.get(mainUrl);
     }

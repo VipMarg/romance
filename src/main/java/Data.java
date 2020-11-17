@@ -7,9 +7,13 @@ public class Data {
     public static final String password="33556677";
     public static final String username="margo2020";
     public static final String phone="123456";
-    public static final String email2="511@gmail.com";
-    public static final String password2="12356";
-
+    public static final String email2="112@gmail.com";
+    public static final String password2="33556677";
+    public static final String day="1";
+    public static final String month="May";
+    public static final String year="1998";
+    public static final String city="Sydney";
+    public static final String location="North Sydney, State of New South Wales, Australia";
 
 
     public static final String expectedUrlPrettyWomen="https://romanceabroad.com/users/search";
@@ -22,5 +26,15 @@ public class Data {
 
     public static final String expectedTitleHowWeWork = "Ukrainian women for marriage";
     public static final String expectedTitlePrettyWomen = "Single Ukrainian women online";
+
+    public static final String expectedUrlContactUs = "https://romanceabroad.com/tickets";
+
+    public static final String your_name="margo2020";
+    public static final String your_email="112@gmail.com";
+    public static final String subject="Help";
+    public static final String message="Hello!";
+
+
+
 
 }

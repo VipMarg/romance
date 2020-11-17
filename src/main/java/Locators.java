@@ -42,13 +42,17 @@ public class Locators {
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_USERNAME=(By.cssSelector("#nickname"));
     public static final By TEXT_FIELD_PHONE=(By.cssSelector("input[name='data[phone]']"));
-    public static final By BUTTON_DAY_SELECT=(By.cssSelector("#daySelect"));
-    public static final By BUTTON_MONTH_SELECT=(By.cssSelector("#monthSelect"));
-    public static final By BUTTON_YEAR_SELECT=(By.cssSelector("#yearSelect"));
-    public static final By LIST_DAY_SELECT=(By.xpath("//li[@data-handler='selectDay']//a[text()='1']"));
-    public static final By LIST_MONTH_SELECT=(By.xpath("//li[@data-handler='selectMonth']//a[text()='May']"));
-    public static final By LIST_YEAR_SELECT=(By.cssSelector("#yearSelect"));
+    public static final By LISTS_DAYS_SELECT=(By.cssSelector("#daySelect"));
+    public static final By LISTS_MONTHS_SELECT=(By.cssSelector("#monthSelect"));
+    public static final By LISTS_YEARS_SELECT=(By.cssSelector("#yearSelect"));
+    public static final By LIST_VALUE_DAY=(By.xpath("//li[@data-handler='selectDay']//a[text()='1']"));
+    public static final By LIST_VALUE_MONTH=(By.xpath("//li[@data-handler='selectMonth']//a[text()='May']"));
+    public static final By LIST_VALUE_YEAR=(By.xpath("//li[@data-handler='selectYear']"));
     public static final By CHECK_BOX_CONFIRMATION=(By.cssSelector("input#confirmation"));
+    public static final By AUTOFILLING_FORM_LOCATION=(By.xpath("//input[@name='region_name']"));
+    public static final By LIST_VALUE_LOCATION= (By.xpath("//div[@class='dropdown dropdown_location']//ul//li"));
+
+
 
     //Join today page
     public static final By LINK_JOIN_TODAY= By.xpath("//a[text()='JOIN TODAY!']");
@@ -73,5 +77,21 @@ public class Locators {
    public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
    public static final By BUTTON_HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
    public static final By BUTTON_HOME_VIDEO_BOX= By.xpath("//button[@class='ytp-large-play-button ytp-button']");
+
+
+                          //Contact us/ Tickets page
+
+
+    public static final By LINK_CONTACT_US=By.xpath("//div[@class='footer-menu-list-group-item-text']");
+    public static final By TITLE_OF_TICKETS_PAGE= By.xpath("//div//h1[text()='Contact administrator']");
+    public static final By DROP_DOWN_LIST_REASON= By.xpath("//div//select[@name='id_reason']");
+    public static final By TEXT_FIELD_YOUR_NAME= By.xpath("//div//input[@name='user_name']");
+    public static final By TEXT_FIELD_YOUR_EMAIL= By.xpath("//div//input[@name='user_email']");
+    public static final By TEXT_FIELD_SUBJECT= By.xpath("//div//input[@name='subject']");
+    public static final By TEXT_FIELD_MESSAGE= By.xpath("//div//textarea[@name='message']");
+    public static final By TEXT_FIELD_CAPTCHA= By.xpath("//span//img[@src='https://romanceabroad.com/temp/captcha/1605489270.04.jpg']");
+    public static final By BUTTON_SEND= By.xpath("//div//input[@type='submit']");
+
+
 
 }
