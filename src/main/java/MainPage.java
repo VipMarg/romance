@@ -27,8 +27,8 @@ public class MainPage extends BaseActions {
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PASSWORD)));
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
     }
-    public void completeSecondPartOfRegistration(String username, String phone, String month,
-                                                 String day, String year, String location, String city){
+    public void completeSecondPartOfRegistration(String phone, String username, String month,
+                                                 String day, String year, String city, String location){
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(Locators.BUTTON_NEXT).click();
         driver.findElement(Locators.TEXT_FIELD_USERNAME).sendKeys(username);
@@ -45,16 +45,14 @@ public class MainPage extends BaseActions {
         clickValueOfLists(Locators.LIST_VALUE_LOCATION,location);
     }
 
-
     public void clickRequestTourInfoButton(){
         driver.findElement(Locators.BUTTON_REQUEST_TOUR_INFO).click();
     }
 
     public void clickLinkJoinToday(){
         driver.findElement(Locators.LINK_JOIN_TODAY).click();
-
     }
-    public void completeFirstPartOfRegistration2(){
+    public void completeJoinTodayRegistration(){
         driver.findElement(Locators.TEXT_FIELD_EMAIL2).sendKeys(Data.email2);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD2).sendKeys(Data.password2);
         driver.findElements(Locators.BUTTON_NEXT2).get(indexButtonNext).click();
@@ -69,6 +67,12 @@ public class MainPage extends BaseActions {
 
     public void clickLinkMailSupport(){
         driver.findElement(Locators.LINK_MAIL_SUPPORT).click();
+    }
+
+    public void clickLinkHowItWorks(){
+        driver.findElement(Locators.LINK_HOWITWORKS).click();
+
+
     }
 
 

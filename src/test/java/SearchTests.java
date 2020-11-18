@@ -7,13 +7,13 @@ import java.util.concurrent.TimeUnit;
 public class SearchTests extends BaseUl {
 
     String currentUrlSearch;
-    public static final boolean testCase1= true;
+    public static final boolean testCase1= false;
     public static final boolean testCase2= true;
     public static final boolean testCase3= true;
 
 
 
-    @Test (priority = 1,enabled = testCase1,groups = {"ie","user","admin"})
+    @Test (priority = 1,enabled = testCase1,groups = {"user"})
     public void testSearchPageTestCase1() {
         driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -47,7 +47,7 @@ public class SearchTests extends BaseUl {
 
     }
 
-    @Test (priority = 2,enabled = testCase3,groups = {"ie","user","admin"})
+    @Test (priority = 2,enabled = testCase3,groups = {"user","admin"})
     public void selectRandomDropDownList2TestCase2() {
         driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -60,7 +60,7 @@ public class SearchTests extends BaseUl {
 
         }
 
-        @Test (priority = 3,enabled = testCase3,groups = {"ie","user","admin"})
+        @Test (priority = 3,enabled = testCase3,groups = {"user","admin"})
     public void verificationsWebTestCase3(){
         Assert.assertEquals("Web","Web");
         }

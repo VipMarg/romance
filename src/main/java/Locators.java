@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 
 public class Locators {
 
+    public static final By H1_TITLE =By.xpath("//h1");
+
    //Media page
     public static final By LINK_MEDIA = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROP_DOWN_LIST_MEDIA_SORT_BY= By.xpath("//*[@id=\"gallery_media_sorter\"]/select");
@@ -10,6 +12,16 @@ public class Locators {
 
  //How it works page"
     public static final By LINK_HOWITWORKS = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
+    public static final By LINKS_OF_ARTICLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
+    public static final By TAB_ADVERTISING = By.xpath("//div[@class='clearfix']//div[text()='Advertising']");
+    public static final By TAB_TERMS_OF_USE = By.xpath("//div[@class='clearfix']//div[text()='Terms of use']");
+    public static final By TAB_PRIVACY_POLICY = By.xpath("//div[@class='clearfix']//div[text()='Privacy Policy']");
+    public static final By TAB_HOW_IT_WORKS = By.xpath("//div[@class='clearfix']//div[text()='How it works']");
+    public static final By TAB_SHIPPING_TERMS = By.xpath("//div[@class='clearfix']//div[text()='Shipping terms']");
+    public static final By TAB_TRAVEL_TO_UKRAINE = By.xpath("//div[@class='clearfix']//div[text()='Travel to Ukraine']");
+    public static final By TAB_BLOG = By.xpath("//div[@class='clearfix']//div[text()='Blog']");
+    public static final By HEADING_OF_PAGE= By.xpath("//div[@class='info-content-block wysiwyg']//h1  ");
+
 
     //Pretty women page
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
@@ -26,6 +38,10 @@ public class Locators {
 
     // ToutToUkraine page
     public static final By LINK_TOUR_TO_UKRAINE= By.xpath("//a[@href='https://romanceabroad.com/store/sweets/20-tour_to_ukraine']");
+    public static final By IMAGES_ON_PAGE= By.xpath("//div[@class='product-main-media pg-thumbnail']");
+    public static final By BUTTON_PAYPAL= By.xpath("//a[@class='btn btn-primary btn-block']");
+    public static final By TAB_CATEGORIES= By.xpath("//i[@class='fa fa-bars']");
+    public static final By BUTTON_SEARCH2= By.xpath("//button[@id='search_friend']");
 
 
     //Blog page
@@ -64,20 +80,25 @@ public class Locators {
                                      //Main page
 
    public static final By TAB_OF_MAIN_PAGE= By.xpath("//ul[@class='navbar-nav']//li");
-   public static final By TITLE_OF_MAIN_PAGE= By.xpath("//div[@class='col-lg-8 mx-auto']//p[@class='text-faded mb-5']");
-   public static final By TITLE_OF_MAIN_PAGE2= By.xpath("//h1[@class='text-uppercase']//strong[text()='Ukrainian Girls Dating Site']");
-   public static final By TITLE_OF_MAIN_PAGE3= By.xpath("//div[@class='col-lg-12 text-center']//h2[@class='section-heading text-white']");
-   public static final By TITLE_OF_MAIN_PAGE4= By.xpath("//div[@class='col-lg-12 text-center']//h3[@class='text-white']");
-   public static final By LOGO_OF_SITE_ON_MAIN_PAGE= By.xpath("//div[@class='col-lg-7 footerlg']//img[@src='/img/logo.jpg']");
    public static final By LINK_YOUTUBE= By.xpath("//a[@href='https://www.youtube.com/channel/UCCmXAG1ToSyHymqYzzJcTfQ']//img[@src='/img/youtube-ico.jpg']");
    public static final By LINK_FACEBOOK= By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']//img[@src='/img/facebook-ico.jpg']");
    public static final By TAB_PHONE= By.xpath("//span//a[@href='callto:18885997816']");
-   public static final By TITLE_GET_IN_TOUCH= By.xpath("//div[@class='col-lg-5']//h2[text()='Get In Touch']");
    public static final By LINK_MAIL_SUPPORT= By.cssSelector("a[href='mailto:support@romanceabroad.com']");
    public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
    public static final By BUTTON_HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
    public static final By BUTTON_HOME_VIDEO_BOX= By.xpath("//button[@class='ytp-large-play-button ytp-button']");
 
+                      //unusable locators on main page
+
+
+    public static final By TITLE_OF_MAIN_PAGE= By.xpath("//div[@class='col-lg-8 mx-auto']//p[@class='text-faded mb-5']");
+    public static final By TITLE_OF_MAIN_PAGE2= By.xpath("//h1[@class='text-uppercase']//strong[text()='Ukrainian Girls Dating Site']");
+    public static final By TITLE_OF_MAIN_PAGE3= By.xpath("//div[@class='col-lg-12 text-center']//h2[@class='section-heading text-white']");
+    public static final By TITLE_OF_MAIN_PAGE4= By.xpath("//div[@class='col-lg-12 text-center']//h3[@class='text-white']");
+    public static final By TITLE_OF_MAIN_PAGE5= By.xpath("//div[@class='col-lg-6']//h2");
+    public static final By TITLE_GET_IN_TOUCH= By.xpath("//div[@class='col-lg-5']//h2[text()='Get In Touch']");
+    public static final By LOGO_OF_SITE_ON_MAIN_PAGE= By.xpath("//div[@class='col-lg-7 footerlg']//img[@src='/img/logo.jpg']");
+    public static final By TEXT_ON_MAIN_PAGE= By.xpath("//p//b[text()='Press “Request Tour Info” button']");
 
                           //Contact us/ Tickets page
 
