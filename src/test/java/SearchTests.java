@@ -48,7 +48,7 @@ public class SearchTests extends BaseUl {
     }
 
     @Test (priority = 2,enabled = testCase3,groups = {"user","admin"})
-    public void selectRandomDropDownList2TestCase2() {
+    public void selectRandomDropDownListTestCase2() {
         driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         int sizeOfDropDownListSortBy= searchPage.getSizeDropDownList(Locators.DROP_DOWN_MAX_AGE);
@@ -61,7 +61,7 @@ public class SearchTests extends BaseUl {
         }
 
         @Test (priority = 3,enabled = testCase3,groups = {"user","admin"})
-    public void verificationsWebTestCase3(){
+    public void verificationsTestCase3(){
         Assert.assertEquals("Web","Web");
         }
 
