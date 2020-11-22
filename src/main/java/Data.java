@@ -3,12 +3,16 @@ public class Data {
     public static final String mainUrl = "https://romanceabroad.com/";
 
     //Registration
+
+    public static final String email2="112yahoo.com";
+    public static final String email3="112@mail.ru";
+    public static final String nickname="MainPage.generateNewNumber(Data.username,Data.lengthSecondPartOfUsername)";
+
     public static final String email="112@gmail.com";
     public static final String password="33556677";
     public static final String username="margo2020";
     public static final String phone="123456";
-    public static final String email2="112@gmail.com";
-    public static final String password2="33556677";
+    public static final int lengthSecondPartOfUsername=5;
     public static final String day="1";
     public static final String month="May";
     public static final String year="1998";
@@ -29,8 +33,7 @@ public class Data {
 
     public static final String expectedUrlContactUs = "https://romanceabroad.com/tickets";
 
-    public static final String your_name="margo2020";
-    public static final String your_email="112@gmail.com";
+
     public static final String subject="Help";
     public static final String message="Hello!";
 

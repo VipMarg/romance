@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,12 +26,14 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PASSWORD)));
-        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
     }
-    public void completeSecondPartOfRegistration(String phone, String username, String month,
-                                                 String day, String year, String city, String location){
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+
+    public void clickNextButton(){
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
         driver.findElement(Locators.BUTTON_NEXT).click();
+    }
+    public void completeSecondPartOfRegistration( String username, String day, String month,
+                                                  String year, String phone,String city, String location){
         driver.findElement(Locators.TEXT_FIELD_USERNAME).sendKeys(username);
         driver.findElement(Locators.LISTS_DAYS_SELECT).click();
         clickValueOfLists(Locators.LIST_VALUE_DAY, day);
@@ -39,10 +42,10 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LISTS_YEARS_SELECT).click();
         clickValueOfLists(Locators.LIST_VALUE_YEAR, year);
         driver.findElement(Locators.TEXT_FIELD_PHONE).sendKeys(phone);
-        driver.findElement(Locators.CHECK_BOX_CONFIRMATION).click();
         driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).clear();
         driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).sendKeys(city);
         clickValueOfLists(Locators.LIST_VALUE_LOCATION,location);
+        driver.findElement(Locators.CHECK_BOX_CONFIRMATION).click();
     }
 
     public void clickRequestTourInfoButton(){
@@ -53,9 +56,9 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.LINK_JOIN_TODAY).click();
     }
     public void completeJoinTodayRegistration(){
-        driver.findElement(Locators.TEXT_FIELD_EMAIL2).sendKeys(Data.email2);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD2).sendKeys(Data.password2);
-        driver.findElements(Locators.BUTTON_NEXT2).get(indexButtonNext).click();
+        driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password);
+        driver.findElements(Locators.BUTTON_NEXT).get(indexButtonNext).click();
 
     }
 

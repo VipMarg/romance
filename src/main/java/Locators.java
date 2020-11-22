@@ -12,7 +12,7 @@ public class Locators {
 
  //How it works page"
     public static final By LINK_HOWITWORKS = By.xpath("//a[@href='https://romanceabroad.com/content/view/how-it-works']");
-    public static final By LINKS_OF_ARTICLES = By.xpath("//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
+    public static final By LINKS_OF_ARTICLES = By.xpath("//div[@class='inside account_menu']//ul[@class='nav nav-pills nav-stacked content-pages-tree']//li");
     public static final By TAB_ADVERTISING = By.xpath("//div[@class='clearfix']//div[text()='Advertising']");
     public static final By TAB_TERMS_OF_USE = By.xpath("//div[@class='clearfix']//div[text()='Terms of use']");
     public static final By TAB_PRIVACY_POLICY = By.xpath("//div[@class='clearfix']//div[text()='Privacy Policy']");
@@ -55,14 +55,15 @@ public class Locators {
     public static final By BUTTON_REGISTRATION = By.xpath("//button[@id='show-registration-block']");
     public static final By TEXT_FIELD_EMAIL = By.cssSelector("input#email");
     public static final By TEXT_FIELD_PASSWORD = By.cssSelector("input#password");
+    public static final By TOOLTIP_ERROR=By.xpath("//div[@class='tooltip']");
     public static final By BUTTON_NEXT = By.xpath("//button[@data-action='next-page'][text()='Next']");
     public static final By TEXT_FIELD_USERNAME=(By.cssSelector("#nickname"));
     public static final By TEXT_FIELD_PHONE=(By.cssSelector("input[name='data[phone]']"));
     public static final By LISTS_DAYS_SELECT=(By.cssSelector("#daySelect"));
     public static final By LISTS_MONTHS_SELECT=(By.cssSelector("#monthSelect"));
     public static final By LISTS_YEARS_SELECT=(By.cssSelector("#yearSelect"));
-    public static final By LIST_VALUE_DAY=(By.xpath("//li[@data-handler='selectDay']//a[text()='1']"));
-    public static final By LIST_VALUE_MONTH=(By.xpath("//li[@data-handler='selectMonth']//a[text()='May']"));
+    public static final By LIST_VALUE_DAY=(By.xpath("//li[@data-handler='selectDay']"));
+    public static final By LIST_VALUE_MONTH=(By.xpath("//li[@data-handler='selectMonth']"));
     public static final By LIST_VALUE_YEAR=(By.xpath("//li[@data-handler='selectYear']"));
     public static final By CHECK_BOX_CONFIRMATION=(By.cssSelector("input#confirmation"));
     public static final By AUTOFILLING_FORM_LOCATION=(By.xpath("//input[@name='region_name']"));

@@ -16,7 +16,7 @@ public class ContactUsTests extends BaseUl {
         contactUsPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_REASON, 0);
         contactUsPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_REASON,1);
         contactUsPage.getDropDownListByIndex(Locators.DROP_DOWN_LIST_REASON,2);
-        contactUsPage.completeFilling(Data.your_name, Data.your_email, Data.subject,Data.message);
+        contactUsPage.completeFilling(Data.username, Data.email, Data.subject,Data.message);
 
     }
 
