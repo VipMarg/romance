@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.openqa.selenium.By;
 
 public class Locators {
@@ -31,7 +33,8 @@ public class Locators {
     public static final By IMAGES= By.xpath("//a[@class='g-pic-border g-rounded']");
     public static final By DROP_DOWN_MAX_AGE= By.cssSelector("select#age_max");
     public static final By DROP_DOWN_MIN_AGE= By.cssSelector("select#age_min");
-    public static final By BUTTON_SEARCH= By.xpath("//*[@id=\"main_search_button_user_advanced\"]");
+    public static final By BUTTON_SEARCH= By.cssSelector("#main_search_button_user_advanced");
+    public static final By NAME_AGE_WOMEN_FIRST_PAGE= By.xpath("//div[@class='text-overflow']");
 
     //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");

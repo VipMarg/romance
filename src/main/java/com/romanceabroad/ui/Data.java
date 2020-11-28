@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 public class Data {
 
     public static final String mainUrl = "https://romanceabroad.com/";
@@ -6,7 +8,7 @@ public class Data {
 
     public static final String email2="112yahoo.com";
     public static final String email3="112@mail.ru";
-    public static final String nickname="MainPage.generateNewNumber(Data.username,Data.lengthSecondPartOfUsername)";
+    public static final String nickname="com.romanceabroad.ui.MainPage.generateNewNumber(com.romanceabroad.ui.Data.username,com.romanceabroad.ui.Data.lengthSecondPartOfUsername)";
 
     public static final String email="112@gmail.com";
     public static final String password="33556677";
@@ -20,7 +22,7 @@ public class Data {
     public static final String location="North Sydney, State of New South Wales, Australia";
 
 
-    public static final String expectedUrlPrettyWomen="https://romanceabroad.com/users/search";
+    public static final String expectedUrlSearch="https://romanceabroad.com/users/search";
     public static final String expectedUrlBlog="https://romanceabroad.com/content/view/blog";
     public static final String expectedUrlGifts="https://romanceabroad.com/store/category-sweets";
     public static final String expectedUrlMedia="https://romanceabroad.com/media/index";

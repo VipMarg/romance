@@ -1,11 +1,13 @@
+package com.romanceabroad.ui;
 
+import com.romanceabroad.ui.Data;
+import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.WeakHashMap;
 
 public class MainPageTests extends BaseUl {
 

@@ -1,3 +1,6 @@
+package com.romanceabroad.ui;
+
+import com.romanceabroad.ui.Locators;
 import org.testng.annotations.Test;
 
 public class SignInTests extends BaseUl {

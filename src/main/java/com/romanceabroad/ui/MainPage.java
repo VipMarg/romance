@@ -1,4 +1,8 @@
-import org.openqa.selenium.By;
+package com.romanceabroad.ui;
+
+import com.romanceabroad.ui.BaseActions;
+import com.romanceabroad.ui.Data;
+import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,7 +21,7 @@ public class MainPage extends BaseActions {
     }
 
     public void clickJoinButton(){
-        //driver.findElement(Locators.BUTTON_REGISTRATION).click();
+        //driver.findElement(com.romanceabroad.ui.Locators.BUTTON_REGISTRATION).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         performClick(Locators.BUTTON_REGISTRATION);
     }

@@ -1,3 +1,7 @@
+package com.romanceabroad.ui;
+
+import com.romanceabroad.ui.Data;
+import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -321,7 +325,7 @@ public class Conditions extends BaseUl {
                 actualTitle = driver.findElement(Locators.TITLE_OF_PAGE).getText();
                 actualUrlPrettyWomen= driver.getCurrentUrl();
                 Assert.assertEquals(Data.expectedTitlePrettyWomen, actualTitle);
-                Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlPrettyWomen);
+                Assert.assertEquals(actualUrlPrettyWomen, Data.expectedUrlSearch);
                 driver.findElement(Locators.IMAGES).isDisplayed();
                if (actualUrlPrettyWomen.contains("#")){
                    Assert.fail("It contains retricted #");

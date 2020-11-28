@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,10 +15,10 @@ public class GiftsTests  {
 
     /*@Test
     public void testStore() {
-        driver.findElement(Locators.LINK_GIFTS).click();
+        driver.findElement(com.romanceabroad.ui.Locators.LINK_GIFTS).click();
         currentUrlGifts = driver.getCurrentUrl();
         System.out.println(currentUrlGifts);
-        Assert.assertEquals(currentUrlGifts, Data.expectedUrlGifts);
+        Assert.assertEquals(currentUrlGifts, com.romanceabroad.ui.Data.expectedUrlGifts);
 
     }*/
     @DataProvider(name="Gifts")
@@ -36,8 +38,8 @@ public class GiftsTests  {
         System.out.println(Flower);
        /* driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         mainPage.clickJoinButton();
-        mainPage.completeFirstPartOfRegistration(Data.email, Data.password);
-        mainPage.completeSecondPartOfRegistration(Data.phone, Data.username, Data.month, Data.day, Data.year, Data.city, Data.location);*/
+        mainPage.completeFirstPartOfRegistration(com.romanceabroad.ui.Data.email, com.romanceabroad.ui.Data.password);
+        mainPage.completeSecondPartOfRegistration(com.romanceabroad.ui.Data.phone, com.romanceabroad.ui.Data.username, com.romanceabroad.ui.Data.month, com.romanceabroad.ui.Data.day, com.romanceabroad.ui.Data.year, com.romanceabroad.ui.Data.city, com.romanceabroad.ui.Data.location);*/
 
 
     }

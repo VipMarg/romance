@@ -6,14 +6,14 @@
   <!-- <test name="IETestCases">
         <parameter name="browser" value="ie"/>
         <classes>
-            <class name ="RegistrationTests"/>
+            <class name ="com.romanceabroad.ui.RegistrationTests"/>
         </classes>
 
     </test>
     <test name="FirefoxTestCases">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name ="RegistrationTests"/>
+            <class name ="com.romanceabroad.ui.RegistrationTests"/>
         </classes>
 
     </test>-->
@@ -23,7 +23,7 @@
     <test name="ChromeTestCases 2">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="RegistrationTests">
+            <class name="com.romanceabroad.ui.RegistrationTests">
 
             </class>
 
@@ -43,7 +43,7 @@
         </groups>
 
         <classes>
-            <class name="SearchTests">
+            <class name="com.romanceabroad.ui.SearchTests">
                 <methods>
                     <include name=".*TestCase1.*"/>
                     <include name=".*TestCase3.*"/>

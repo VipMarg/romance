@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -39,6 +41,23 @@ public class BaseActions {
         select.selectByValue(value);
 
     }
+
+    public void getDropDownListByIndex(WebElement element, int index) {
+        Select select = new Select(element);
+        select.selectByIndex(index);
+    }
+
+    public void getDropDownListByText(WebElement element, String text) {
+        Select select = new Select(element);
+        select.selectByVisibleText(text);
+    }
+
+    public void getDropDownListByValue(WebElement element, String value) {
+        Select select = new Select(element);
+        select.selectByValue(value);
+
+    }
+
 
     public void ajaxClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);

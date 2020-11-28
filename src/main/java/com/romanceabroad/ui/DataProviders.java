@@ -1,3 +1,5 @@
+package com.romanceabroad.ui;
+
 import org.testng.annotations.DataProvider;
 
 import java.nio.file.Files;
@@ -9,11 +11,25 @@ public class DataProviders {
     @DataProvider(name = "Registration2")
     public static Object[][] testRegistration2() {
         return new Object[][]{
-                {Data.email,Data.nickname,true},
-                {Data.email2,Data.nickname,false},
-                {Data.email3,Data.nickname,true},
+                {Data.email, Data.nickname,true},
+                {Data.email2, Data.nickname,false},
+                {Data.email3, Data.nickname,true},
         };
     }
+    @DataProvider(name = "Search")
+    public static Object[][] testSearchFeature() {
+        return new Object[][]{
+                {"18", "80","Default"},
+                {"18", "19","Name"},
+                {"30", "40","Views"},
+                {"60", "80","Registration date"},
+
+        };
+    }
+
+
+
+
     @DataProvider(name = "Registration")
     public static Object[][] testRegistration ()throws Exception {
         ArrayList<Object[]> out = new ArrayList<>();

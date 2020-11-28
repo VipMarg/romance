@@ -1,3 +1,8 @@
+package com.romanceabroad.ui;
+
+import com.romanceabroad.ui.Data;
+import com.romanceabroad.ui.DataProviders;
+import com.romanceabroad.ui.Locators;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
@@ -42,7 +47,7 @@ public class RegistrationTests extends BaseUl {
             mainPage.clickNextButton();
             mainPage.completeSecondPartOfRegistration(Data.username, Data.day, Data.month, Data.year, Data.phone, Data.city, Data.location);
            /*  WebElement checkboxConfirmation= driver.findElement(By.cssSelector("input#confirmation"));
-                   Assert.assertTrue(!driver.findElement(Locators.LINK_SEARCH).isSelected(),"Element is not displayed");
+                   Assert.assertTrue(!driver.findElement(com.romanceabroad.ui.Locators.LINK_SEARCH).isSelected(),"Element is not displayed");
                    checkboxConfirmation.click();
 */
         }
