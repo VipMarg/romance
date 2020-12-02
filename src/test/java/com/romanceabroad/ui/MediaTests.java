@@ -1,15 +1,14 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.Data;
-import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class MediaTests extends BaseUl {
 
     String currentUrlMedia;
-
+    String actualTitle;
 
 
     @Test
@@ -35,8 +34,36 @@ public class MediaTests extends BaseUl {
         mediaPage.getDropDownListByValue(Locators.DROP_DOWN_LIST_MEDIA_SORT_BY,"comments_count");
         WebElement dropDownListAddPhoto = driver.findElement(Locators.DROP_DOWN_LIST_MEDIA_ADD_PHOTO);
 
-
     }
+    @Test
+    public void testUserTabs(){
+        mediaPage.clickPhotosTab();
+        List<WebElement>userTabs= driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+        actualTitle= mediaPage.getAnyTitle();
+        Assert.assertEquals(actualTitle, Data.expectedTitleAllPhotos);
+
+        for (int i = 0; i < userTabs.size(); i++) {
+            userTabs.get(i).click();
+          actualTitle = mediaPage.getAnyTitle();
+          if(i==0){
+              Assert.assertEquals(actualTitle, Data.expectedTitleGallery);
+          } else if(i==1){
+              Assert.assertEquals(actualTitle, Data.expectedTitlePhotoGallery);
+          } else  if(i==2) {
+              Assert.assertEquals(actualTitle, Data.expectedTitleVideoGallery);
+          } else  if(i==3) {
+              Assert.assertEquals(actualTitle, Data.expectedTitleGalleryAlbums);
+          }
+
+            userTabs= driver.findElements(Locators.LINK_TAB_USER_PROFILE);
+
+          }
+          }
+
+        }
 
 
-}
+
+
+
+

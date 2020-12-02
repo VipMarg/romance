@@ -1,7 +1,4 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.Data;
-import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;

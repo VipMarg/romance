@@ -6,10 +6,11 @@ public class Locators {
 
     public static final By H1_TITLE =By.xpath("//h1");
 
-   //Media page
+   //Photos page
     public static final By LINK_MEDIA = By.xpath("//a[@href='https://romanceabroad.com/media/index']");
     public static final By DROP_DOWN_LIST_MEDIA_SORT_BY= By.xpath("//*[@id=\"gallery_media_sorter\"]/select");
     public static final By DROP_DOWN_LIST_MEDIA_ADD_PHOTO= By.xpath("//button[@data-media='add_photo']");
+    public static final By LINK_TAB_USER_PROFILE= By.xpath("//ul[@id='gallery_filters']//a");
 
 
  //How it works page"
@@ -34,7 +35,7 @@ public class Locators {
     public static final By DROP_DOWN_MAX_AGE= By.cssSelector("select#age_max");
     public static final By DROP_DOWN_MIN_AGE= By.cssSelector("select#age_min");
     public static final By BUTTON_SEARCH= By.cssSelector("#main_search_button_user_advanced");
-    public static final By NAME_AGE_WOMEN_FIRST_PAGE= By.xpath("//div[@class='text-overflow']");
+    public static final By TEXT_USER_INFO= By.xpath("//div[@class='text-overflow']");
 
     //Gifts page
     public static final By LINK_GIFTS = By.xpath("//a[@href='https://romanceabroad.com/store/category-sweets']");

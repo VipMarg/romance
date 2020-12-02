@@ -1,6 +1,4 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

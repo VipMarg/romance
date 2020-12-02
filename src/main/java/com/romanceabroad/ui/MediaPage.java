@@ -1,15 +1,18 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.BaseActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MediaPage extends BaseActions {
 
     public MediaPage(WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
-    }
+        super(driver, wait); }
 
+
+        public void clickPhotosTab(){
+
+           driver.findElement(Locators.LINK_MEDIA).click();
+
+        }
 
 
 }
