@@ -53,6 +53,12 @@ public class Locators {
 
    //Sign in page
    public static final By LINK_SIGN_IN= By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");
+   public static final By TEXT_FIELD_EMAIL3=By.xpath("//div[@class='col-xs-8']//input[@type='text']");
+   public static final By TEXT_FIELD_PASSWORD3=By.xpath("//div[@class='col-xs-8']//input[@type='password']");
+   public static final By BUTTON_SIGN_IN= By.xpath("//div[@class='col-xs-12']//button[@type='submit']");
+   public static final By TEXT_ERROR=By.xpath("//div[@id='autogen_error_block']");
+   public static final By TEXT_ERROR2=By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
+
 
                                             // Main page
     //Registration page (Join for free now)

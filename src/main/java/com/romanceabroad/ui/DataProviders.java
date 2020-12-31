@@ -41,6 +41,15 @@ public class DataProviders {
 
     }
 
+    @DataProvider(name = "SignIn2")
+    public static Object[][] testSignIn2() {
+        return new Object[][]{
+                {Data.email, Data.password,true},
+                {Data.email2, Data.password,false},
+                {Data.email3, Data.password,true},
+
+        };
+    }
 
 
 }

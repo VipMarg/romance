@@ -12,10 +12,11 @@ import java.util.concurrent.TimeUnit;
 
 public class MainPage extends BaseActions {
     int indexButtonNext = 1;
-
+    int indexLinkSignIn = 0;
     public MainPage(WebDriver driver, WebDriverWait wait){
 
         super(driver, wait);
+
 
 
     }
@@ -83,6 +84,19 @@ public class MainPage extends BaseActions {
     }
 
 
+    public void clickLinkSignIn(){
+        driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
+    }
+    public void completeFirstPartOfSignIn(String email, String password){
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL3).sendKeys(email);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD3).sendKeys(password);
+
+    }
+    public void clickSignInButton(){
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_SIGN_IN));
+        driver.findElement(Locators.BUTTON_SIGN_IN).click();
+    }
 
 
 
