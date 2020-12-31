@@ -2,6 +2,7 @@ package com.romanceabroad.ui;
 
 import com.romanceabroad.ui.Data;
 import com.romanceabroad.ui.Locators;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -86,5 +87,19 @@ public class HowItWorksTests extends BaseUl {
         }
 
     }
+
+    @Test
+    public void testFooter() {
+        mainPage.clickLinkHowItWorks();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        List<WebElement> links = driver.findElements(By.xpath("//div[@class='footer-menu-list-group-item-text']"));
+        System.out.println(links.size());
+        for (int i = 0; i < links.size(); i++) {
+            String info = links.get(i).getText();
+            System.out.println(info);
+        }
+
+    }
+
 
 }

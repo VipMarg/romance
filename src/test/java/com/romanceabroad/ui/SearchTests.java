@@ -66,7 +66,7 @@ public class SearchTests extends BaseUl {
     @Test(priority = 3, enabled = testCase2, groups = {"user", "admin"})
     public void verificationsTestCase2() {
         Assert.assertEquals("Web", "Web");
-        //Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(),"Element is not displayed");
+       // Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(),"Element is not displayed");
         Assert.fail("Element is not displayed");
 
 

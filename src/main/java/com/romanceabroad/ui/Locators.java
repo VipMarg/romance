@@ -24,6 +24,7 @@ public class Locators {
     public static final By TAB_TRAVEL_TO_UKRAINE = By.xpath("//div[@class='clearfix']//div[text()='Travel to Ukraine']");
     public static final By TAB_BLOG = By.xpath("//div[@class='clearfix']//div[text()='Blog']");
     public static final By HEADING_OF_PAGE= By.xpath("//div[@class='info-content-block wysiwyg']//h1  ");
+    public static final By TAB_FOOTER=By.xpath("//div[@class='footer-menu-list-group-item-text']");
 
 
     //Pretty women page

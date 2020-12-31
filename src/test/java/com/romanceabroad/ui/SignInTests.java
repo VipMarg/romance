@@ -21,7 +21,7 @@ public class SignInTests extends BaseUl {
 
     @Test(dataProvider = "SignIn2",dataProviderClass = DataProviders.class)
     public void testSignIn2(String email, String password, boolean requirement) {
-
+        System.out.println(email);
         driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
         mainPage.completeFirstPartOfSignIn(email, Data.password);
         if (requirement) {
