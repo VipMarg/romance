@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
 
 
 public class MainPage extends BaseActions {
@@ -29,8 +30,9 @@ public class MainPage extends BaseActions {
     public void completeFirstPartOfRegistration(String email, String password){
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(email);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(Locators.TEXT_FIELD_PASSWORD)));
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(password);
+
     }
 
     public void clickNextButton(){
@@ -50,6 +52,7 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).clear();
         driver.findElement(Locators.AUTOFILLING_FORM_LOCATION).sendKeys(city);
         clickValueOfLists(Locators.LIST_VALUE_LOCATION,location);
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.CHECK_BOX_CONFIRMATION));
         driver.findElement(Locators.CHECK_BOX_CONFIRMATION).click();
     }
 

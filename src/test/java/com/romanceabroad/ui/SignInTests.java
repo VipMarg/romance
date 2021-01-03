@@ -24,13 +24,10 @@ public class SignInTests extends BaseUl {
         System.out.println(email);
         driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
         mainPage.completeFirstPartOfSignIn(email, Data.password);
-        if (requirement) {
+        if (!requirement) {
             Assert.assertTrue(driver.findElement(Locators.TEXT_ERROR).isDisplayed());
-        } else {
-            mainPage.clickSignInButton();
-
-
         }
+        mainPage.clickSignInButton();
     }
 
 

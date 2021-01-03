@@ -2,11 +2,18 @@ package com.romanceabroad.ui;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
+import com.automation.remarks.testng.VideoListener;
+
+import com.automation.remarks.video.annotations.Video;
+
+import org.testng.annotations.Listeners;
+@Listeners(VideoListener.class)
+
 
 public class RegistrationTests extends BaseUl {
 
 
-
+    @Video(name="Registration test")
     @Test(dataProvider = "Registration2",dataProviderClass = DataProviders.class)
     public void testRegistration2(String email, String nickname, boolean requirement) {
         System.out.println(email);
