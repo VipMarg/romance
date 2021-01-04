@@ -21,6 +21,7 @@ public class RegistrationTests extends BaseUl {
         mainPage.clickJoinButton();
         mainPage.completeFirstPartOfRegistration(email, Data.password);
         if (!requirement) {
+            Reports.log("Error message is not displayed");
             Assert.assertTrue(driver.findElement(Locators.TOOLTIP_ERROR).isDisplayed());
         } else {
             mainPage.clickNextButton();
