@@ -1,7 +1,4 @@
 package com.romanceabroad.ui;
-
-import com.romanceabroad.ui.Data;
-import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -52,7 +49,6 @@ public class Conditions extends BaseUl {
         }
 
     }
-
     @Test
     public void test4() {
         String fruit1 = "";
@@ -67,6 +63,8 @@ public class Conditions extends BaseUl {
             Assert.fail("We can't find fruit!");
         }
     }
+
+
 
     @Test
     public void test5() {
@@ -108,8 +106,8 @@ public class Conditions extends BaseUl {
         if (!checkbox.isSelected()) {
             checkbox.click();
             System.out.println("Checkbox is selected!");
-        }
 
+        }
     }
 
     @Test
