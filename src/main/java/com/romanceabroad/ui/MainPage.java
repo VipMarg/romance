@@ -12,7 +12,7 @@ import java.util.concurrent.locks.Condition;
 
 
 public class MainPage extends BaseActions {
-    int indexButtonNext = 1;
+
     int indexLinkSignIn = 0;
     public MainPage(WebDriver driver, WebDriverWait wait){
 
@@ -89,8 +89,9 @@ public class MainPage extends BaseActions {
         clickValueOfLists(Locators.LIST_VALUE_LOCATION,location);
 
         Reports.log("Click check box");
+        wait.until(ExpectedConditions.presenceOfElementLocated(Locators.CHECK_BOX_CONFIRMATION));
         wait.until(ExpectedConditions.elementToBeClickable(Locators.CHECK_BOX_CONFIRMATION));
-        driver.findElement(Locators.CHECK_BOX_CONFIRMATION).click();
+        ajaxClick(driver.findElement(Locators.CHECK_BOX_CONFIRMATION));
     }
 
     public void clickRequestTourInfoButton(){
@@ -103,7 +104,8 @@ public class MainPage extends BaseActions {
     public void completeJoinTodayRegistration(){
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
         driver.findElement(Locators.TEXT_FIELD_PASSWORD).sendKeys(Data.password);
-        driver.findElements(Locators.BUTTON_NEXT).get(indexButtonNext).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_NEXT));
+        driver.findElement(Locators.BUTTON_NEXT).click();
 
     }
 
