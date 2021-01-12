@@ -1,6 +1,7 @@
 package com.romanceabroad.ui;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -51,15 +52,16 @@ public class Conditions extends BaseUl {
     }
     @Test
     public void test4() {
-        String fruit1 = "";
-        String fruit2 = "";
+        String fruit1 = "kiwi";
+        String fruit2 = "kiwi";
 
-        if (fruit2.contains("orange")) {
+        if (fruit2.contains("kiwi")) {
             System.out.println("We can find our fruit 1!");
         }
-        if (fruit1.contains("orange")) {
+        if (fruit1.contains("kiwi")) {
             System.out.println("We can find our fruit2!");
-        } else {
+        }
+        else {
             Assert.fail("We can't find fruit!");
         }
     }
@@ -100,15 +102,22 @@ public class Conditions extends BaseUl {
         System.out.println(sum);
     }
 
-    @Test
+    /*@Test
     public void test8() {
+
+        *//*driver.findElement(Locators.BUTTON_REGISTRATION);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        mainPage.completeFirstPartOfRegistration(Data.email, Data.password);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.BUTTON_NEXT).click();*//*
+
         WebElement checkbox = driver.findElement(Locators.CHECK_BOX_CONFIRMATION);
         if (!checkbox.isSelected()) {
             checkbox.click();
             System.out.println("Checkbox is selected!");
 
         }
-    }
+    }*/
 
     @Test
     public void test9() {
