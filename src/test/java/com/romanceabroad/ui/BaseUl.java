@@ -77,7 +77,7 @@ public class BaseUl {
             Reports.fail(driver,testResult.getName());
         }
         Reports.stop();
-        //driver.quit();
+        driver.quit();
     }
 
 
