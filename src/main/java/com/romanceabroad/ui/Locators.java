@@ -97,7 +97,7 @@ public class Locators {
    public static final By TAB_PHONE= By.xpath("//span//a[@href='callto:18885997816']");
    public static final By LINK_MAIL_SUPPORT= By.cssSelector("a[href='mailto:support@romanceabroad.com']");
    public static final By BUTTON_REQUEST_TOUR_INFO = By.xpath("//a[@href='https://romanceabroad.com/REQUEST_TOUR_INFO+Application_Form.doc']");
-   public static final By BUTTON_HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
+   public static final By HOME_VIDEO_BOX_IFRAME= By.xpath("//iframe[@src='https://www.youtube.com/embed/RRECuJzm3IY?start=85']");
    public static final By BUTTON_HOME_VIDEO_BOX= By.xpath("//button[@class='ytp-large-play-button ytp-button']");
 
                       //unusable locators on main page

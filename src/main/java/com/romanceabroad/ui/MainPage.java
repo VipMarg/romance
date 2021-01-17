@@ -110,7 +110,7 @@ public class MainPage extends BaseActions {
     }
 
     public void clickButtonVideoBox(){
-        WebElement ele = driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX_IFRAME);
+        WebElement ele = driver.findElement(Locators.HOME_VIDEO_BOX_IFRAME);
         driver.switchTo().frame(ele);
         driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).click();
     }

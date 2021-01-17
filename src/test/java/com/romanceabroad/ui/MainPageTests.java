@@ -47,7 +47,7 @@ public class MainPageTests extends BaseUl {
     @Test
     public void testHomeVideoBox() {
         mainPage.clickButtonVideoBox();
-        Assert.assertTrue(driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).isDisplayed(),"Element is displayed");
+        driver.findElement(Locators.BUTTON_HOME_VIDEO_BOX).isDisplayed();
         System.out.println("Element is displayed");
 
     }
