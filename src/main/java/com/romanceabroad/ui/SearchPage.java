@@ -20,6 +20,21 @@ public class SearchPage extends BaseActions {
     }
 
 
+    public void clickMobileMenu(String valueOfBox) {
+        if (valueOfBox.contains("mobile")) {
+            driver.findElement(Locators.MOBILE_MENU).click();
+        }
+    }
+
+    public void clickSearchParameters(String valueOfBox) {
+        if (valueOfBox.contains("mobile")) {
+            driver.findElement(Locators.MOBILE_LINK_SEARCH_PARAMETERS).click();
+        }
+
+
+    }
+
+
 
 
 

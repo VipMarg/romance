@@ -28,6 +28,7 @@ public class Locators {
 
 
     //Pretty women page
+    public static final By MOBILE_LINK_SEARCH_PARAMETERS= By.xpath("//div[@class='search-param-button mb10']//a");
     public static final By LINK_SEARCH = By.xpath("//a[@href='https://romanceabroad.com/users/search']");
     public static final By TITLE_OF_PAGE= By.xpath("//h1");
     public static final By DROP_DOWN_LIST_SORT_BY = By.xpath("//div[@class='form-inline']//select");
@@ -91,6 +92,7 @@ public class Locators {
 
                                      //Main page
 
+    public static final By MOBILE_MENU = By.xpath("//span[@class='navbar-toggler-icon']");
    public static final By TAB_OF_MAIN_PAGE= By.xpath("//ul[@class='navbar-nav']//li");
    public static final By LINK_YOUTUBE= By.xpath("//a[@href='https://www.youtube.com/channel/UCCmXAG1ToSyHymqYzzJcTfQ']//img[@src='/img/youtube-ico.jpg']");
    public static final By LINK_FACEBOOK= By.xpath("//a[@href='https://m.facebook.com/RomanceAbroad/?ref=bookmarks']//img[@src='/img/facebook-ico.jpg']");

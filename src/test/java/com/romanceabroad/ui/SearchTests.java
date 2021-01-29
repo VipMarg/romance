@@ -1,6 +1,8 @@
 package com.romanceabroad.ui;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -11,13 +13,17 @@ public class SearchTests extends BaseUl {
     String currentUrlSearch;
     public static final boolean testCase1 = true;
     public static final boolean testCase2 = false;
-    public static final boolean testCase3 = true;
-    public static final boolean testCase4 = true;
+    public static final boolean testCase3 = false;
+    public static final boolean testCase4 = false;
 
 
     @Test
     public void testSearchPageTestCase() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+        String value= valueOfBox;
+        searchPage.clickMobileMenu(valueOfBox);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        searchPage.clickPrettyWomenLink();
+        //driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         currentUrlSearch = driver.getCurrentUrl();
         System.out.println(currentUrlSearch);
@@ -39,7 +45,11 @@ public class SearchTests extends BaseUl {
 
     @Test
     public void selectRandomDropDownList() {
-        driver.findElement(Locators.LINK_SEARCH).click();
+        String value= valueOfBox;
+        searchPage.clickMobileMenu(valueOfBox);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        searchPage.clickPrettyWomenLink();
+        //driver.findElement(Locators.LINK_SEARCH).click();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DROP_DOWN_LIST_SORT_BY);
         System.out.println(sizeOfDropDownListSortBy);
@@ -52,10 +62,14 @@ public class SearchTests extends BaseUl {
 
     @Test(priority = 2, enabled = testCase1, groups = {"user", "admin"})
     public void selectRandomDropDownListTestCase1() {
+        String value= valueOfBox;
+        searchPage.clickMobileMenu(valueOfBox);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         searchPage.clickPrettyWomenLink();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         int sizeOfDropDownListSortBy = searchPage.getSizeDropDownList(Locators.DROP_DOWN_MAX_AGE);
         System.out.println(sizeOfDropDownListSortBy);
+        searchPage.clickSearchParameters(valueOfBox);
         for (int i = 0; i < sizeOfDropDownListSortBy; i++) {
             searchPage.selectItemDropDownRandomOption(Locators.DROP_DOWN_MAX_AGE, "Sort by");
             mainPage.javaWaitSec(3);
@@ -66,7 +80,7 @@ public class SearchTests extends BaseUl {
     @Test(priority = 3, enabled = testCase2, groups = {"user", "admin"})
     public void verificationsTestCase2() {
         Assert.assertEquals("Web", "Web");
-       // Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(),"Element is not displayed");
+        // Assert.assertTrue(driver.findElement(By.xpath("//a")).isSelected(),"Element is not displayed");
         Assert.fail("Element is not displayed");
 
 
