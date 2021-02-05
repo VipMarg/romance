@@ -92,7 +92,7 @@
 
     <test name="ChromeTestCases 2">
 
-        <parameter name="testEnv" value="prod"/>
+        <parameter name="testEnv" value="qa"/>
         <parameter name="testBox" value="web"/>
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="68.0"/>

@@ -50,6 +50,18 @@ public class DataProviders {
 
         };
     }
-
+    @DataProvider(name="NewRequirementsForPassword")
+    public static Object[][] newRequirementsForPassword(){
+        return new Object[][]{
+                {"ParisWithLove", true},
+                {"Boston1", true},
+                {"Boston23", true},
+                {"Boston@@", true},
+                {"Paris21", true},
+                {"LondonNow", true},
+                {"Miami##1", false},
+                {"Miami25", false},
+        };
+    }
 
 }

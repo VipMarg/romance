@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -41,7 +42,7 @@ public class BaseUl {
         WEB, MOBILE, SAUCE
     }
     protected enum TestBrowser{
-        CHROME, FIREFOX, IE
+        CHROME, FIREFOX, IE, REMOTE_CHROME, REMOTE_FIREFOX
     }
 
     @BeforeMethod(groups={"user","admin","ie"},alwaysRun = true)
@@ -65,7 +66,12 @@ public class BaseUl {
             testBrowser = TestBrowser.FIREFOX;
         }else if (browser.equalsIgnoreCase("ie")){
             testBrowser = TestBrowser.IE;
+        }else if (browser.equalsIgnoreCase("remoteChrome")){
+            testBrowser = TestBrowser.REMOTE_CHROME;
+        }else if (browser.equalsIgnoreCase("remoteFirefox")){
+            testBrowser = TestBrowser.REMOTE_FIREFOX;
         }
+
 
 
         switch (testBox) {
@@ -88,6 +94,21 @@ public class BaseUl {
                         driver = new InternetExplorerDriver();
                         driver.manage().deleteAllCookies();
                         break;
+                    case REMOTE_CHROME:
+                        System.out.println("Remote Chrome");
+                        ChromeOptions chromeOptions = new ChromeOptions();
+                        chromeOptions.addArguments("__headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),chromeOptions);
+                        break;
+                    case REMOTE_FIREFOX:
+                        System.out.println("Remote Firefox");
+                        FirefoxOptions firefoxOptions = new FirefoxOptions();
+                        firefoxOptions.addArguments("__headless");
+                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),firefoxOptions);
+                        break;
+
+
+
 
                     default:
                         System.out.println("Default!!!");
@@ -143,7 +164,7 @@ public class BaseUl {
 
         PageFactory.initElements(driver,mainPage);
         //PageFactory.initElements(driver,searchPage);
-        // PageFactory.initElements(driver,mediaPage);
+        //PageFactory.initElements(driver,mediaPage);
 
         if (env.contains("qa")){
             driver.get(Data.mainUrl);
@@ -165,7 +186,7 @@ public class BaseUl {
             Reports.fail(driver,testResult.getName());
         }
         Reports.stop();
-        // driver.quit();
+         driver.quit();
     }
 
 

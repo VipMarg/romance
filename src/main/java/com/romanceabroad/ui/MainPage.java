@@ -5,6 +5,7 @@ import com.romanceabroad.ui.Data;
 import com.romanceabroad.ui.Locators;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,10 @@ import java.util.concurrent.locks.Condition;
 
 public class MainPage extends BaseActions {
 
-    int indexLinkSignIn = 0;
+    @FindBy(xpath = "//button[@id='show-registration-block']")
+    WebElement registrationButton;
+
+
     public MainPage(WebDriver driver, WebDriverWait wait){
 
         super(driver, wait);
@@ -26,7 +30,7 @@ public class MainPage extends BaseActions {
         Reports.log("Wait Join Button");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
          //or wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_REGISTRATION));
-        //driver.findElement(Locators.BUTTON_REGISTRATION).click(); or
+       // driver.findElement(Locators.BUTTON_REGISTRATION).click(); or
         Reports.log("Click Join Button");
         performClick(Locators.BUTTON_REGISTRATION);
     }
@@ -98,8 +102,8 @@ public class MainPage extends BaseActions {
         driver.findElement(Locators.BUTTON_REQUEST_TOUR_INFO).click();
     }
 
-    public void clickLinkJoinToday(){
-        driver.findElement(Locators.LINK_JOIN_TODAY).click();
+    public void clickTabJoinToday(){
+        driver.findElement(Locators.TAB_JOIN_TODAY).click();
     }
     public void completeJoinTodayRegistration(){
         driver.findElement(Locators.TEXT_FIELD_EMAIL).sendKeys(Data.email);
@@ -127,16 +131,26 @@ public class MainPage extends BaseActions {
 
 
     public void clickLinkSignIn(){
-        driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
+        wait.until(ExpectedConditions.elementToBeClickable(Locators.LINK_SIGN_IN));
+        driver.findElement(Locators.LINK_SIGN_IN).click();
     }
     public void completeFirstPartOfSignIn(String email, String password){
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-        driver.findElement(Locators.TEXT_FIELD_EMAIL3).sendKeys(email);
-        driver.findElement(Locators.TEXT_FIELD_PASSWORD3).sendKeys(password);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL_SIGN_IN).sendKeys(email);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD_SIGN_IN).sendKeys(password);
 
     }
     public void clickSignInButton(){
         wait.until(ExpectedConditions.elementToBeClickable(Locators.BUTTON_SIGN_IN));
+        driver.findElement(Locators.BUTTON_SIGN_IN).click();
+    }
+
+
+    public void fillInSignInForm(String password){
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.TEXT_FIELD_EMAIL_SIGN_IN).sendKeys(Data.email);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.findElement(Locators.TEXT_FIELD_PASSWORD_SIGN_IN).sendKeys(Data.password);
         driver.findElement(Locators.BUTTON_SIGN_IN).click();
     }
 

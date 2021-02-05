@@ -54,12 +54,12 @@ public class Locators {
     public static final By LINK_BLOG = By.xpath("//a[@href='https://romanceabroad.com/content/view/blog']");
 
    //Sign in page
-   public static final By LINK_SIGN_IN= By.xpath("//a[@href='https://romanceabroad.com/users/login_form']");
-   public static final By TEXT_FIELD_EMAIL3=By.xpath("//div[@class='col-xs-8']//input[@type='text']");
-   public static final By TEXT_FIELD_PASSWORD3=By.xpath("//div[@class='col-xs-8']//input[@type='password']");
-   public static final By BUTTON_SIGN_IN= By.xpath("//div[@class='col-xs-12']//button[@type='submit']");
-   public static final By TEXT_ERROR=By.xpath("//div[@id='autogen_error_block']");
-   public static final By TEXT_ERROR2=By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
+   public static final By LINK_SIGN_IN= By.xpath("//a[@href='https://romanceabroad.com/users/login_form'][@id='ajax_login_link']");
+   public static final By TEXT_FIELD_EMAIL_SIGN_IN=By.xpath("//div[@class='col-xs-8']//input[@id='email']");
+   public static final By TEXT_FIELD_PASSWORD_SIGN_IN=By.xpath("//div[@class='col-xs-8']//input[@id='password']");
+   public static final By BUTTON_SIGN_IN= By.xpath("//button[@name='logbtn']");
+   public static final By TEXT_ERROR2=By.xpath("//div[@id='autogen_error_block']");
+   public static final By TEXT_ERROR=By.xpath("//div[@class='error alert-danger alert-warning_pop_']");
 
 
                                             // Main page
@@ -80,14 +80,9 @@ public class Locators {
     public static final By CHECK_BOX_CONFIRMATION=(By.cssSelector("input#confirmation"));
     public static final By AUTOFILLING_FORM_LOCATION=(By.xpath("//input[@name='region_name']"));
     public static final By LIST_VALUE_LOCATION= (By.xpath("//div[@class='dropdown dropdown_location']//ul//li"));
+    //Join today page//the same email,password,next button as join for free now
+    public static final By TAB_JOIN_TODAY= By.xpath("//a[text()='JOIN TODAY!']");
 
-
-
-    //Join today page
-    public static final By LINK_JOIN_TODAY= By.xpath("//a[text()='JOIN TODAY!']");
-    public static final By TEXT_FIELD_EMAIL2= By.cssSelector("input#email");
-    public static final By TEXT_FIELD_PASSWORD2= By.cssSelector("input#password");
-    public static final By BUTTON_NEXT2= By.cssSelector(".btn.btn-primary.btn-block.btn-lg");
 
 
                                      //Main page

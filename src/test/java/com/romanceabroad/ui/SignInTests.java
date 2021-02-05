@@ -1,6 +1,8 @@
 package com.romanceabroad.ui;
 
 import com.romanceabroad.ui.Locators;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,12 +11,12 @@ import java.util.concurrent.TimeUnit;
 public class SignInTests extends BaseUl {
 
 
-    int indexLinkSignIn = 0;
+
 
 
     @Test
     public void testSignIn() {
-        driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
+        driver.findElement(Locators.LINK_SIGN_IN).click();
 
 
     }
@@ -22,7 +24,7 @@ public class SignInTests extends BaseUl {
     @Test(dataProvider = "SignIn2",dataProviderClass = DataProviders.class)
     public void testSignIn2(String email, String password, boolean requirement) {
         System.out.println(email);
-        driver.findElements(Locators.LINK_SIGN_IN).get(indexLinkSignIn).click();
+        driver.findElement(Locators.LINK_SIGN_IN).click();
         mainPage.completeFirstPartOfSignIn(email, Data.password);
         mainPage.clickSignInButton();
         if (!requirement) {
@@ -30,7 +32,15 @@ public class SignInTests extends BaseUl {
         }
 
     }
+    @Test(dataProvider = "NewRequirementsForPassword", dataProviderClass = DataProviders.class)
+    public void password(String password, boolean requirement){
+    mainPage.clickLinkSignIn();
+    mainPage.fillInSignInForm(password);
+    if(!requirement){
+        Assert.assertTrue(driver.findElement(Locators.TEXT_ERROR).isDisplayed());
+    }
 
+    }
 
 
 

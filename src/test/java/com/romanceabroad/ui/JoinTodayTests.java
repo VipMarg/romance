@@ -9,7 +9,7 @@ public class JoinTodayTests extends BaseUl {
 
     @Test
     public void testJoinToday() {
-       mainPage.clickLinkJoinToday();
+       mainPage.clickTabJoinToday();
        mainPage.completeJoinTodayRegistration();
     }
 }
