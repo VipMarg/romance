@@ -126,7 +126,7 @@ public class BaseUl {
                     case CHROME:
                         System.out.println("Mobile Chrome");
                         Map<String, String> mobileEmulation = new HashMap<String, String>();
-                        mobileEmulation.put("deviceName", "Galaxy S5");
+                        mobileEmulation.put("deviceName", "Galaxy S5");//or "variable device" if want to check many devices
                         ChromeOptions chromeOptions = new ChromeOptions();
                         chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
                         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
